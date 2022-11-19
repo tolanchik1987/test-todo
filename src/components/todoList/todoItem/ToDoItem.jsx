@@ -34,7 +34,7 @@ const ToDoItem = ({ todo, deleteTodo, checkTodo, selectTodoIdForEdit }) => {
                </h2>
                {todo.checked && (
                   <b className={classes.checked_visible_text}>
-                     Задание выполнено или дата истекла!
+                     Задание выполнено или дата завершения истекла!
                   </b>
                )}
             </div>

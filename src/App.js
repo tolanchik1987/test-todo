@@ -4,6 +4,8 @@ import classes from "./App.module.scss";
 import ToDoPanel from "./components/todoPanel/ToDoPanel";
 import ToDoListt from "./components/todoList/ToDoListt";
 import { getCheckedDate } from "./components/utils/getCheckedDate.js";
+import { getDatabase } from "firebase/database";
+import { app } from "./components/utils/firebase";
 
 /**
  * Начальное значение листа с заданиями
@@ -108,6 +110,11 @@ const App = () => {
          })
       );
    };
+
+	React.useEffect(() => {
+		const db = getDatabase(app, "https://womanup-test-efc9d-default-rtdb.firebaseio.com");
+		console.log(db)
+	},[])
 
 	/**
 	 * Функция устанавливает какое задание надо изменить

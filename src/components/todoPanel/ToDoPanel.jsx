@@ -3,7 +3,7 @@ import Button from "../button/Button";
 import classes from "./ToDoPanel.module.scss";
 
 /**
- * Начальное значение заданиямя
+ * Начальное значение задания
  * @type {{
  *		name: string,
  *		description: string,
@@ -13,8 +13,15 @@ import classes from "./ToDoPanel.module.scss";
  */
 const DEFAULT_TODO = { name: "", description: "", date: "", file: "" };
 
+/**
+ * Компонент принимающий пропсы с функциями
+ * @param {function} mode Режим устанавливающий "Добавить" или "Изменить"
+ * @param {function} addTodo Функция добавляет в конец списка новое задание
+ * @param {function} checkTodo Функция устанавливает какое задание отмечено или наоборот
+ * @param {function} editTodo Передает какое задание выбранно что бы его отредактировать
+ */
 const ToDoPanel = ({ mode, addTodo, changeTodo, editTodo }) => {
-   const isEdit = mode === "edit"; // Проверяем режим на редактироване 
+   const isEdit = mode === "edit"; // Проверяем режим на редактироване "add" или "edit"
    const [todo, setTodo] = React.useState(isEdit ? editTodo : DEFAULT_TODO); // Выбранное задание взависимости от режима
 
    /**
