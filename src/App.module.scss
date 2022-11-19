@@ -1,0 +1,11 @@
+.app_conteiner {
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   .conteiner {
+      display: flex;
+      flex-direction: column;
+      width: 500px;
+   }
+}

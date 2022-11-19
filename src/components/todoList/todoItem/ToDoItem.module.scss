@@ -1,0 +1,79 @@
+.conteiner {
+   .todo__conteiner {
+      display: flex;
+      flex-direction: column;
+      .img_checked__conteiner {
+         display: flex;
+         .checked_visible_text {
+            font-size: 24px;
+            color:red;
+            margin-left: 20px;
+            margin-top: 20px;
+         }
+         .img__checked {
+            margin-top: 20px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 1px solid #000;
+            position: relative;
+            cursor: pointer;
+            img {
+               width: 30px;
+               position: absolute;
+               cursor: pointer;
+            }
+         }
+         .todo_checked {
+            opacity: 0.5;
+            margin-left: 20px;
+            text-decoration: line-through;
+            color: rgb(95, 187, 3);
+            cursor: pointer;
+         }
+         .todo_notChecked {
+            margin-left: 20px;
+            cursor: pointer;
+         }
+      }
+      .todo__item {
+         margin-left: 90px;
+         font-size: 24px;
+         .checked {
+            opacity: 0.3;
+         }
+         .notChecked {
+            opacity: 1;
+         }
+         table {
+            border-collapse: collapse;
+            border: 2px solid rgb(0, 0, 0);
+            width: 100%;
+            tr {
+               .td_header {
+                  font-weight: 700;
+                  color: rgb(0, 0, 0);
+                  padding: 10px;
+                  border: 2px solid rgb(0, 0, 0);
+                  text-align: center;
+               }
+               .td_body {
+                  text-align: center;
+                  font-size: 16px;
+                  padding: 10px;
+                  border: 2px solid rgb(0, 0, 0);
+                  &.file {
+                     width: 200px;
+                  }
+               }
+            }
+         }
+      }
+      .todo_item_button_container {
+         display: flex;
+         justify-content: right;
+         margin-top: 10px;
+         gap: 5px;
+      }
+   }
+}
